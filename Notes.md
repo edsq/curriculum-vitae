@@ -3,8 +3,11 @@
 ## 2026-01-27
 
 Todo:
-- [ ] Figure out what `\smc` is supposed to do (used e.g. in Awards section)
-- [ ] Fix fonts; at least get it properly bolded matching Michael's thesis
+- [x] Figure out what `\smc` is supposed to do (used e.g. in Awards section)
+  - It stands for "smallcaps", does what it says on the tin.
+  - We had to make some modifications to make it work; specifically using the package
+    `newpx`.
+- [x] Fix fonts; at least get it properly bolded matching Michael's thesis
 - [ ] Add later scholarship to Awards section
 - [ ] Update Forbes Group research
 - [ ] Add later DAMOP talks/posters
