@@ -1,0 +1,121 @@
+% Skeleton from Michael McNiel Forbes
+% https://cocalc.com/projects/13fd6946-fdd9-474e-a824-5ba2b0d7efda/files/Skeletons/Resume/mforbes/
+\documentclass{curve}
+\providecommand{\thebibliography}{}
+\usepackage{bibentry}
+\usepackage{natbib}
+\usepackage[letterpaper,nohead,nofoot,hmargin=1.2cm,vmargin=1.1cm,
+            %showframe, 
+            ]{geometry}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{suffix}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\DeclareSIUnit\CAD{\smc{CAD}}
+\DeclareSIUnit\USD{\smc{USD}}
+\newcommand{\CAD}[1]{\SI{#1}[\$]{\CAD}}
+\newcommand{\USD}[1]{\SI{#1}[\$]{\USD}}
+\newcommand{\select}[5]{#4}    % Use to select font options.
+\newcommand{\smc}[1]{\textsc{\MakeLowercase{#1}}}
+\newcommand{\headerfont}{\fontfamily{pag}\selectfont}
+\newcommand{\exclude}[1]{}
+\frenchspacing
+
+\title{Edward Eskew}
+\select{% Use \newcommand{\select}[5]{#1}
+}{% Use \newcommand{\select}[5]{#2}
+  \usepackage{pslatex}
+}{% Use \newcommand{\select}[5]{#3}
+  \titlefont{\fontfamily{pbk}\selectfont\bfseries\Huge}
+  \subtitlefont{\fontfamily{pbk}\selectfont\itshape\huge}
+  \rubricfont{\fontfamily{pbk}\selectfont\bfseries\Large}
+  \subrubricfont{\fontfamily{pbk}\selectfont\bfseries\itshape\large}
+  \keyfont{\fontfamily{pbk}\selectfont\bfseries}
+}{% Use \newcommand{\select}[5]{#4}
+  \usepackage{pslatex}
+  \titlefont{\fontfamily{pag}\selectfont\bfseries\Huge}
+  \subtitlefont{\fontfamily{pag}\selectfont\itshape\huge}
+  \rubricfont{\fontfamily{pag}\selectfont\bfseries\Large}
+  \subrubricfont{\fontfamily{pag}\selectfont\bfseries\itshape\large}
+  \keyfont{\fontfamily{pag}\selectfont\bfseries}
+}{% Use \newcommand{\select}[5]{#5}
+  %\usepackage{xunicode}
+  \usepackage[LY1]{fontenc}
+  \usepackage{fontspec}
+  \usepackage{eulervm}
+  % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+  \defaultfontfeatures{Mapping=tex-text}
+  \setromanfont[Ligatures={Common},Numbers={OldStyle}]{Minion Pro}
+  \setsansfont[Ligatures={Common}]{Myriad Pro}
+  \setmonofont{Myriad Pro}
+
+  \titlefont{\fontspec[Ligatures={Common}]%
+    {Minion Pro}%
+    \fontsize{36pt}{40pt}\bfseries\scshape\selectfont}
+
+  \titlefont{\fontspec[Ligatures={Common}]%
+    {Futura}%
+    \fontsize{36pt}{40pt}\selectfont}
+
+  \rubricfont{\fontspec[Ligatures={Common}]{Myriad Pro}%
+    \fontsize{24pt}{32pt}\selectfont}
+
+  \renewcommand{\headerfont}{}
+  \keyfont{\hfill\ttfamily}
+  \newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
+}
+\sisetup{detect-all}
+
+% WSU Address
+\leftheader{
+  \headerfont
+  Washington State University\\
+  Physics and Astronomy\\
+  PO Box 642814\\
+  Webster 947A\\
+  Pullman, WA, 99164-2814\\
+  USA}
+
+\rightheader{
+  \headerfont
+  \textbf{Cell Phone:} (508) 494-5570\\
+  \textbf{Email:} \texttt{edward.eskew@wsu.edu}}
+
+%\photo[r]{data/head_2012.jpg}
+
+\newcounter{paper}%
+\makeatletter
+\patchcmd{\entry}{\@ifstar}{\addtocounter{paper}{1}\@ifstar}{}{}
+\makeatother
+
+\begin{document}
+%\nobibliography{master}%\makeheaders
+\makeheaders
+\maketitle
+
+%\prefix{\llap{[\arabic{paper}]}}
+%\makerubric{publications}
+\prefix{\textbullet}
+
+% \makerubric{worksinprogress}
+\setlength{\linewidth}{0.8\textwidth}
+%\makerubric{education}
+%\makerubric{experience}
+%\makerubric{publications}
+%\makerubric{other_publications}
+%\makerubric{talks}
+%\makerubric{workshops}
+%\makerubric{awards}
+%\makerubric{service}
+%\makerubric{funding}
+
+\bibliographystyle{res}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
