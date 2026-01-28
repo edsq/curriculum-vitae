@@ -8,7 +8,7 @@ Todo:
   - We had to make some modifications to make it work; specifically using the package
     `newpx`.
 - [x] Fix fonts; at least get it properly bolded matching Michael's thesis
-- [ ] Add later scholarship to Awards section
+- [x] Add later scholarship to Awards section
 - [ ] Update Forbes Group research
 - [x] Add later DAMOP talks/posters
 - [x] Add Thouless conference
