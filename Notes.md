@@ -18,7 +18,7 @@ Todo:
 - [ ] Teaching and Outreach
 - [ ] Include coursework?  Perhaps at end
 - [ ] Add overview of interests and skills
-- [ ] Add WSU Showcase poster
+- [x] Add WSU Showcase poster
 - [ ] Maybe count recruitment weekends as posters?
 - [ ] Add NQN Hackathon?
 - [ ] Add INT workshop?
