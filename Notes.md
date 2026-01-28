@@ -11,7 +11,7 @@ Todo:
 - [ ] Add later scholarship to Awards section
 - [ ] Update Forbes Group research
 - [x] Add later DAMOP talks/posters
-- [ ] Add Thouless conference
+- [x] Add Thouless conference
 - [ ] Add specific teaching, see 2022 CV for classes
 - [ ] Add skills from 2022 CV (?), or maybe in overview
 - [ ] Add outreach, e.g. recruitment weekend posters, CU*iP volunteering
