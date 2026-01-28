@@ -10,7 +10,7 @@ Todo:
 - [x] Fix fonts; at least get it properly bolded matching Michael's thesis
 - [ ] Add later scholarship to Awards section
 - [ ] Update Forbes Group research
-- [ ] Add later DAMOP talks/posters
+- [x] Add later DAMOP talks/posters
 - [ ] Add Thouless conference
 - [ ] Add specific teaching, see 2022 CV for classes
 - [ ] Add skills from 2022 CV (?), or maybe in overview
