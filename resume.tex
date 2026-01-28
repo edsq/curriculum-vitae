@@ -30,7 +30,6 @@
   \usepackage[LY1]{fontenc}
   \usepackage{fontspec}
 
-  \usepackage[sc,osf]{mathpazo}   % With old-style figures and real smallcaps.
   \usepackage{newpx}
   \linespread{1.025}              % Palatino leads a little more leading
 
@@ -40,13 +39,10 @@
 
   % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
   \defaultfontfeatures{Mapping=tex-text}
-  \setromanfont{Palatino}
-  \setsansfont{Helvetica Neue}
+  \setsansfont[Ligatures={Common}]{Helvetica Neue}
   \setmonofont{Helvetica Neue}
 
-  \titlefont{\fontspec%
-    {Palatino}%
-    \fontsize{36pt}{40pt}\bfseries\scshape\selectfont}
+  \titlefont{\fontsize{36pt}{40pt}\bfseries\scshape\selectfont}
 
   \titlefont{\fontspec[Ligatures={Common}]%
     {Futura}%
@@ -57,7 +53,7 @@
 
   \renewcommand{\headerfont}{}
   \keyfont{\hfill\ttfamily}
-  \newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
+  %\newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
 }{% Use \newcommand{\select}[5]{#2}
   \usepackage{pslatex}
 }{% Use \newcommand{\select}[5]{#3}
