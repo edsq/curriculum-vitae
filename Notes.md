@@ -12,10 +12,10 @@ Todo:
 - [ ] Update Forbes Group research
 - [x] Add later DAMOP talks/posters
 - [x] Add Thouless conference
-- [ ] Add specific teaching, see 2022 CV for classes
+- [x] Add specific teaching, see 2022 CV for classes
 - [ ] Add skills from 2022 CV (?), or maybe in overview
 - [ ] Add outreach, e.g. recruitment weekend posters, CU*iP volunteering
-- [ ] Teaching and Outreach
+- [x] Teaching and Outreach
 - [ ] Include coursework?  Perhaps at end
 - [ ] Add overview of interests and skills
 - [x] Add WSU Showcase poster
