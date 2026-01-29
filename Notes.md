@@ -23,8 +23,8 @@ Todo:
 - [x] Maybe count recruitment weekends as posters?
   - Don't think I will, since I want to list them under Outreach and they were each not
     much of a cohesive poster
-- [ ] Add NQN Hackathon?
-- [ ] Add INT workshop?
+- [x] Add NQN Hackathon?
+- [x] Add INT workshop?
 
 Papers in progress:
 - See two papers on Overleaf
