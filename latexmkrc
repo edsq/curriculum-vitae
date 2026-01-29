@@ -5,6 +5,6 @@ $out_dir = '_build';
 mkdir $out_dir;
 #$pdflatex = 'pdflatex %O %S';
 $pdflatex = 'pdflatex -shell-escape -synctex=1 %O %S; cp %D .';
-$xelatex = 'xelatex -shell-escape -synctex=1 %O %S; cp %D .';
+$xelatex = 'xelatex -shell-escape -synctex=1 %O %S';
 $pdf_previewer = 'open -a skim';
 
