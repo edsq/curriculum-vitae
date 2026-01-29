@@ -14,12 +14,15 @@ Todo:
 - [x] Add Thouless conference
 - [x] Add specific teaching, see 2022 CV for classes
 - [ ] Add skills from 2022 CV (?), or maybe in overview
-- [ ] Add outreach, e.g. recruitment weekend posters, CU*iP volunteering
+- [x] Add outreach, e.g. recruitment weekend posters, CU*iP volunteering
+- [ ] Verify dates on coffee hour?
 - [x] Teaching and Outreach
 - [ ] Include coursework?  Perhaps at end
 - [ ] Add overview of interests and skills
 - [x] Add WSU Showcase poster
-- [ ] Maybe count recruitment weekends as posters?
+- [x] Maybe count recruitment weekends as posters?
+  - Don't think I will, since I want to list them under Outreach and they were each not
+    much of a cohesive poster
 - [ ] Add NQN Hackathon?
 - [ ] Add INT workshop?
 
