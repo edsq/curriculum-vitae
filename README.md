@@ -63,6 +63,14 @@ Thus, to change to one of the other options given in the actual invocation of th
 the second option: `\newcommand{\select}[6]{#2}`.
 
 
+## GitHub releases
+
+I've configured my build workflow to publish a release with a built PDF when the commit
+is tagged.  I'll tag according to [CalVer](https://calver.org), with the format
+`YYYY.0M.0D.MICRO`, where the `MICRO` will start from zero and increment to account for
+multiple releases over one day.
+
+
 ## Acknowledgements
 
 The original skeleton for this CV is thanks to Michael McNeil Forbes.

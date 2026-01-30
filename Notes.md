@@ -2,15 +2,41 @@
 
 ## 2026-01-30
 
-I wanted to use open source fonts to avoid problems building on other computers; this
-would enable e.g. typsetting on GitHub CI.
+- I wanted to use open source fonts to avoid problems building on other computers; this
+  would enable e.g. typsetting on GitHub CI.
+  - [Inter](https://rsms.me/inter/) is a nice alternative I found to Helvetica Neue
+  - [Jost](https://indestructibletype.com/Jost.html) is a nice alternative to Futura.
+    The trouble here is that the actual font is "Jost*", with an asterisk in the name.
+    This causes [problems for LaTeX](https://github.com/latex3/fontspec/issues/437), so I
+    won't be able to use it from a system install.  Instead, I'm giving fontspec the path
+    to a vendored copy of the .ttf file I want.
 
-- [Inter](https://rsms.me/inter/) is a nice alternative I found to Helvetica Neue
-- [Jost](https://indestructibletype.com/Jost.html) is a nice alternative to Futura.
-  The trouble here is that the actual font is "Jost*", with an asterisk in the name.
-  This causes [problems for LaTeX](https://github.com/latex3/fontspec/issues/437), so I
-  won't be able to use it from a system install.  Instead, I'm giving fontspec the path
-  to a vendored copy of the .ttf file I want.
+- I set up the `gh-release` GitHub action to release when I push a tagged commit.  As
+  part of this, I wanted to rename `_build/resume.pdf`:
+```yml
+- name: Rename built PDF
+  run: mv _build/resume.pdf eskew_CV.pdf
+```
+- This failed with a `Permission denied` error, so I just changed it to `sudo mv` and it
+  seemed to work.
+
+- It looks like `jj` doesn't have native support for pushing tags yet, so I need to run
+  `git push --tags` from within a colocated repo.
+  - I may also be able to just set tags from within GitHub.
+
+- To give the `gh-release` action permission to create a release for my repository, I
+  had to create a [fine-grained GitHub personal access
+  token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token),
+  which I called `curriculum-vitae_release`.  I've set it to expire in one year, at
+  which point I'll have to do this again.
+  - I set it to have access only to the `curriculum-vitae` repository
+  - I clicked on "Add permissions", selected "Contents", and gave it "Read and Write"
+    access.
+  - I copied the token text from the page that appears after creating the token
+  - In the CV repository settings, under Security/Secrets and variables/Actions, I added
+    this token as a new repository secret, named "GH_RELEASE_TOKEN"
+  - I can now pass the `gh-release` action this token under the `token` key with the
+    syntax `${{ secrets.GH_RELEASE_TOKEN }}`
 
 
 ## 2026-01-27

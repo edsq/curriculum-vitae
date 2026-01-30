@@ -12,8 +12,17 @@ jobs:
           root_file: resume.tex
           latexmk_use_xelatex: true
           extra_fonts: ./fonts/Inter-4/Inter.ttc
+      - name: Rename built PDF
+        run: sudo mv _build/resume.pdf eskew_CV.pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v6.0.0
         with:
           name: eskew_CV
-          path: _build/resume.pdf
+          path: eskew_CV.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v2.5.0
+        if: github.ref_type == 'tag'
+        with:
+          files: eskew_CV.pdf
+          generate_release_notes: true
+          token: ${{ secrets.GH_RELEASE_TOKEN }}
