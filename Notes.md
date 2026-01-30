@@ -1,5 +1,18 @@
 # Working notes
 
+## 2026-01-30
+
+I wanted to use open source fonts to avoid problems building on other computers; this
+would enable e.g. typsetting on GitHub CI.
+
+- [Inter](https://rsms.me/inter/) is a nice alternative I found to Helvetica Neue
+- [Jost](https://indestructibletype.com/Jost.html) is a nice alternative to Futura.
+  The trouble here is that the actual font is "Jost*", with an asterisk in the name.
+  This causes [problems for LaTeX](https://github.com/latex3/fontspec/issues/437), so I
+  won't be able to use it from a system install.  Instead, I'm giving fontspec the path
+  to a vendored copy of the .ttf file I want.
+
+
 ## 2026-01-27
 
 Todo:

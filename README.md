@@ -4,7 +4,6 @@
 
 This is the repository for my CV.
 
-The original skeleton for this CV is thanks to Michael McNeil Forbes.
 
 ## Requirements
 
@@ -12,9 +11,7 @@ The original skeleton for this CV is thanks to Michael McNeil Forbes.
   - I used [MacTeX](https://www.tug.org/mactex/) for this, which came with CurVe.
 - For the default font options, you need at least the following fonts installed on your
   system:
-  - Helvetica Neue
-  - Futura
-  - Palatino
+  - [Inter](https://rsms.me/inter)
 - To use `latexmk`:
   - [latexmk](https://www.cantab.net/users/johncollins/latexmk/) itself, of course.
     This certainly comes with your LaTeX distribution.
@@ -53,14 +50,29 @@ only one `*.tex` file in the root.
 
 ## Font and style options
 
-The `resume.tex` skeleton file includes a custom `\select` command for easily switching
-between different fonts/styles.  It takes 5 arguments (at the moment) and is hardcoded
-in its definition to simply pick one of them to add to the TeX source:
+The `resume.tex` skeleton file includes a simple `\select` command for easily switching
+between different fonts/styles.  It takes 6 arguments (at the moment) and is hardcoded
+in its definition to just pick one of them to add to the TeX source:
 
 ```tex
-\newcommand{\select}[5]{#1}
+\newcommand{\select}[6]{#1}
 ```
 
 Thus, to change to one of the other options given in the actual invocation of the
 `\select` command, you would change the definition in the preamble.  For example, to use
-the second option: `\newcommand{\select}[5]{#2}`.
+the second option: `\newcommand{\select}[6]{#2}`.
+
+
+## Acknowledgements
+
+The original skeleton for this CV is thanks to Michael McNeil Forbes.
+
+I am using the open source fonts [Inter](https://rsms.me/inter) and
+[Jost*](https://indestructibletype.com/Jost.html).
+
+Inter is Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter).
+
+Jost* is Copyright 2020 The Jost Project Authors
+(https://github.com/indestructible-type/Jost).
+
+
