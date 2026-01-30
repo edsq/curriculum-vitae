@@ -26,6 +26,7 @@ Todo:
 - [x] Add NQN Hackathon?
 - [x] Add INT workshop?
 - [ ] Check on titles and authors for papers in progress
+- [x] Add presentation to PWG
 
 Papers in progress:
 - See two papers on Overleaf
