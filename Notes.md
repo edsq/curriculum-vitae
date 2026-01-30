@@ -9,7 +9,7 @@ Todo:
     `newpx`.
 - [x] Fix fonts; at least get it properly bolded matching Michael's thesis
 - [x] Add later scholarship to Awards section
-- [ ] Update Forbes Group research
+- [x] Update Forbes Group research
 - [x] Add later DAMOP talks/posters
 - [x] Add Thouless conference
 - [x] Add specific teaching, see 2022 CV for classes
