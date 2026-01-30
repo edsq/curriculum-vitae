@@ -1,5 +1,7 @@
 # Curriculum Vitae: Edward Eskew
 
+[![LaTeX build](https://github.com/edsq/curriculum-vitae/actions/workflows/build.yml/badge.svg)](https://github.com/edsq/curriculum-vitae/actions/workflows/build.yml)
+
 This is the repository for my CV.
 
 The original skeleton for this CV is thanks to Michael McNeil Forbes.
