@@ -50,7 +50,7 @@ To do:
 - [ ] Fix font on URLS: PWG presentation and selected code repositories
 - [ ] Add e.g. pytimeode to repos
 - [ ] Don't split repos into personal/professional
-- [ ] Fix smc where the first letter is capitalized (only do if acronyms are start of
+- [x] Fix smc where the first letter is capitalized (only do if acronyms are start of
   the sentence)
 - [ ] Maybe pagebreak before talks and posters to avoid orphaned talk
 - [ ] Fix spacing around dates in talks
