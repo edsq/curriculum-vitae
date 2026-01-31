@@ -71,7 +71,7 @@ Todo:
 - [x] Add later DAMOP talks/posters
 - [x] Add Thouless conference
 - [x] Add specific teaching, see 2022 CV for classes
-- [ ] Add skills from 2022 CV (?), or maybe in overview
+- [x] Add skills from 2022 CV (?), or maybe in overview
 - [x] Add outreach, e.g. recruitment weekend posters, CU*iP volunteering
 - [ ] Verify dates on coffee hour?
 - [x] Teaching and Outreach
