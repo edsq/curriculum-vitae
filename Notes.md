@@ -53,7 +53,7 @@ To do:
 - [x] Fix smc where the first letter is capitalized (only do if acronyms are start of
   the sentence)
 - [ ] Maybe pagebreak before talks and posters to avoid orphaned talk
-- [ ] Fix spacing around dates in talks
+- [x] Fix spacing around dates in talks
 - [ ] Maybe use glossaries package to define WSU acronym
 - [ ] Include GPU programming somewhere, perhaps under current research
 
