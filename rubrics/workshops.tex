@@ -1,23 +1,45 @@
+\begingroup  % Define local scope for commands
+
+\newcommand{\workshop}[5]{\entry[#1]{\textbf{#2}: \ifblank{#3}{}{``#3'', }#5}}
+% Syntax is:
+% \workshop{Date}
+%     {Workshop title}
+%     {Subtitle (can leave blank)}
+%     {Role}
+%     {Location}
+% I'm hiding `Role` from the output for now, but could add it back in later.
+% I've also been making `Subtitle` a link to the workshop with \href, when
+% a link is available.
+
 \begin{rubric}{Workshops}
-  \entry[23 June -- 8 August 2025]{%
-    \textbf{Attendee: I\smc{NT} Program 25-xx:}
-    \href{https://www.int.washington.edu/current-program}
-    {``Compressible Turbulence: From Cold Atoms to Neutron Star Mergers''},
-    \smc{INT}, Seattle, WA}
-  \entry[16 -- 18 January 2025]{%
-    \textbf{Attendee: Thouless Institute for Quantum Matter Winter Workshop}
-    \href{https://sites.google.com/uw.edu/tiqm/workshops/tiqm-2025-winter-workshop}
-    {``New Developments in Synthetic Quantum Matter''},
-    Seattle, WA}
-  \entry[23 -- 24 January 2023]{%
-    \textbf{Attendee: Northwest Quantumn Nexus Summit}
-    ``Accelerating Quantum Information Science Momentum in the Pacific Northwest'',
-    Seattle, WA}
-  \entry[20 -- 22 January 2023]{%
-    \textbf{Participant: Northwest Quantum Nexus Winter Hackathon}
-    ``Exploring the limits of running programs on IonQ quantum hardware'',
-    Seattle, WA}
+    \workshop{23 June -- 8 August 2025}
+        {I\smc{NT} Program 25-xx}
+        {\href{https://www.int.washington.edu/current-program}
+            {Compressible Turbulence: From Cold Atoms to Neutron Star Mergers}}
+        {Attendee}
+        {\smc{INT}, Seattle, WA}
+
+    \workshop{16 -- 18 January 2025}
+        {Thouless Institute for Quantum Matter Winter Workshop}
+        {\href{https://sites.google.com/uw.edu/tiqm/workshops/tiqm-2025-winter-workshop}
+            {New Developments in Synthetic Quantum Matter}}
+        {Attendee}
+        {Seattle, WA}
+
+    \workshop{23 -- 24 January 2023}
+        {Northwest Quantumn Nexus Summit}
+        {Accelerating Quantum Information Science Momentum in the Pacific Northwest}
+        {Attendee}
+        {Seattle, WA}
+
+    \workshop{20 -- 22 January 2023}
+        {Northwest Quantum Nexus Winter Hackathon}
+        {Exploring the limits of running programs on IonQ quantum hardware}
+        {Participant}
+        {Seattle, WA}
 \end{rubric}
+
+\endgroup
 
 %%% Local Variables:
 %%% mode: latex
