@@ -46,6 +46,18 @@
     build, if possible
 
 
+To do:
+- [ ] Fix font on URLS: PWG presentation and selected code repositories
+- [ ] Add e.g. pytimeode to repos
+- [ ] Don't split repos into personal/professional
+- [ ] Fix smc where the first letter is capitalized (only do if acronyms are start of
+  the sentence)
+- [ ] Maybe pagebreak before talks and posters to avoid orphaned talk
+- [ ] Fix spacing around dates in talks
+- [ ] Maybe use glossaries package to define WSU acronym
+- [ ] Include GPU programming somewhere, perhaps under current research
+
+
 ## 2026-01-27
 
 Todo:
