@@ -55,7 +55,7 @@ To do:
 - [ ] Maybe pagebreak before talks and posters to avoid orphaned talk
 - [x] Fix spacing around dates in talks
 - [ ] Maybe use glossaries package to define WSU acronym
-- [ ] Include GPU programming somewhere, perhaps under current research
+- [x] Include GPU programming somewhere, perhaps under current research
 
 
 ## 2026-01-27
