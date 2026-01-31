@@ -38,6 +38,13 @@
   - I can now pass the `gh-release` action this token under the `token` key with the
     syntax `${{ secrets.GH_RELEASE_TOKEN }}`
 
+- The release process is a little awkward, since I can't simultaneously push the latest
+  revision and tag.  I think the best practice is probably to `jj git push`, and then
+  after do the `git push --tags`.
+  - This means the latex is built twice, unfortunately.
+  - I should update the github workflow to do the release separately from the latex
+    build, if possible
+
 
 ## 2026-01-27
 
