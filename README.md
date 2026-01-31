@@ -7,7 +7,7 @@ This is the repository for my CV.
 
 ## Requirements
 
-- A distribution of LaTeX and the [CurVe](https://ctan.org/pkg/curve) available.
+- A distribution of LaTeX and the [CurVe](https://ctan.org/pkg/curve) package available.
   - I used [MacTeX](https://www.tug.org/mactex/) for this, which came with CurVe.
 - For the default font options, you need at least the following fonts installed on your
   system:
@@ -75,10 +75,13 @@ multiple releases over one day.
 
 The original skeleton for this CV is thanks to Michael McNeil Forbes.
 
-I am using the open source fonts [Inter](https://rsms.me/inter) and
+I am using the open source fonts [Inter](https://rsms.me/inter), Bistream Vera, and
 [Jost*](https://indestructibletype.com/Jost.html).
 
 Inter is Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter).
+
+Bitstream Vera is Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream
+Vera is a trademark of Bitstream, Inc.
 
 Jost* is Copyright 2020 The Jost Project Authors
 (https://github.com/indestructible-type/Jost).

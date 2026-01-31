@@ -68,7 +68,11 @@
   % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
   \defaultfontfeatures{Mapping=tex-text}
   \setsansfont[Ligatures={Common}]{Inter}
-  \setmonofont{Inter}
+  \setmonofont[
+      Path = ./fonts/ttf-bitstream-vera-1.10/,
+      Extension = .ttf,
+      Scale = 0.85,
+  ]{VeraMono}
 
   \titlefont{\fontsize{36pt}{40pt}\bfseries\scshape\selectfont}
 
@@ -84,7 +88,7 @@
     \fontsize{24pt}{32pt}\selectfont}
 
   \renewcommand{\headerfont}{}
-  \keyfont{\hfill\ttfamily}
+  \keyfont{\hfill\fontspec[Ligatures={Common}]{Inter}}
 }{% Use \newcommand{\select}[5]{#3}
   \usepackage{pslatex}
 }{% Use \newcommand{\select}[5]{#4}
