@@ -1,72 +1,97 @@
-\begingroup
-% Local scope for these commands
-\def\title#1{\textit{#1}\newline}
-\def\date#1{#1}
-\newcommand{\program}[2]{#1, #2,}  % #1 is name, #2 is location
+\begingroup  % Local scope for these commands
+
+\newcommand{\presentationtitle}[1]{\textit{#1}}
+\newcommand{\program}[2]{#1, #2}  % #1 is name, #2 is location
+\newcommand{\presentationdate}[1]{#1}
+
+\newcommand{\presentation}[6]{%
+    \entry[#1]{%
+        \ifblank{#6}{\presentationtitle{#2}}{\href{#6}{\presentationtitle{#2}}}
+
+        \program{#3}{#4}, \presentationdate{#5}%
+    }
+}
+% Syntax is:
+% \presentation{Type}
+%     {Title}
+%     {Program}
+%     {Location}
+%     {Date}
+%     {Link (leave blank to omit)}
+
+% \talk and \poster shortcuts which don't need the "Type" argument
+\newcommand{\talk}[4]{\presentation{Talk}{#1}{#2}{#3}{#4}}
+\newcommand{\poster}[4]{\presentation{Poster}{#1}{#2}{#3}{#4}}
+
 %\subrubricalignment{r}
 \subrubricfont{\sffamily}
+
+
 \begin{rubric}{Talks and Posters}
-  \subrubric{2025}
-  \entry[Talk]{%
-    \href{https://schedule.aps.org/damop/2025/events/E03/1}
-    {\title{Instabilities and Transport in a Phase-Wound BEC in an Elongated Trap}}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Portland, OR}
-    \date{18~June~2025}}
+    \subrubric{2025}
+        \talk{Instabilities and Transport in a Phase-Wound BEC in an Elongated Trap}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Portland, OR}
+            {18~June~2025}
+            {https://schedule.aps.org/damop/2025/events/E03/1}
 
-  \entry[Poster]{
-    \title{A dynamic Rayleigh-Taylor-like instability in a misicble BEC}
-    \program{Thouless Institute for Quantum Matter 2025 Winter Workshop}{Seattle, WA}
-    \date{16-17~January~2025}}
+        \poster{A dynamic Rayleigh-Taylor-like instability in a misicble BEC}
+            {Thouless Institute for Quantum Matter 2025 Winter Workshop}
+            {Seattle, WA}
+            {16-17~January~2025}
+            {}
 
+    \subrubric{2024}
+        \talk{Dynamic Rayleigh-Taylor-like Instabilities in BECs}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Fort Worth, TX}
+            {5~June~2024}
+            {https://meetings.aps.org/Meeting/DAMOP24/Session/F09.8}
 
-  \subrubric{2024}
-  \entry[Talk]{%
-    \href{https://meetings.aps.org/Meeting/DAMOP24/Session/F09.8}
-    {\title{Dynamic Rayleigh-Taylor-like Instabilities in BECs}}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Fort Worth, TX}
-    \date{5~June~2024}}
+    \subrubric{2023}
+        \talk{The Emergence of Classical Hydrodynamics from Quantum Turbulence}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Spokane, WA}
+            {8~June~2023}
+            {}
 
+        \poster{Instabilities and the onset of Turbulence in Bose-Einstein Condensates}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Spokane, WA}
+            {7~June~2023}
+            {}
 
-  \subrubric{2023}
-  \entry[Talk]{%
-    \title{The Emergence of Classical Hydrodynamics from Quantum Turbulence}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Spokane, WA}
-    \date{8~June~2023}}
+        \poster{The Emergence of Classical Hydrodynamics from Quantum Turbulence}
+            {W\smc{SU} Academic Showcase}
+            {Pullman, WA}
+            {30~March~2023}
+            {}
 
-  \entry[Poster]{%
-    \title{Instabilities and the onset of Turbulence in Bose-Einstein Condensates}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Spokane, WA}
-    \date{7~June~2023}}
+        % Need to make this entry by hand so I can add the link at the bottom
+        \entry[Talk]{%
+            \presentationtitle{\href{https://www.youtube.com/watch?v=S5rTwC6HUwY}
+                    {Project Management and Publishing with PDM}}\newline
+            \program{W\smc{SU} Python Working Group}{Pullman, WA},
+            \presentationdate{8~February~2023}\newline
+            \url{https://edsq.github.io/eds-notes/python_notes/pwg_presentation/intro.html}%
+        }
 
-  \entry[Poster]{%
-    \title{The Emergence of Classical Hydrodynamics from Quantum Turbulence}
-    \program{W\smc{SU} Academic Showcase}{Pullman, WA}
-    \date{30~March~2023}}
+    \subrubric{2022}
+        \poster{Classical Hydrodynamics and Coarse-Grained Quantum Turbulence}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Orlando, FL}
+            {1~June~2022}
+            {https://meetings.aps.org/Meeting/DAMOP22/Session/N01.65}
 
-  \entry[Talk]{%
-    \title{\href{https://www.youtube.com/watch?v=S5rTwC6HUwY}
-    {Project Management and Publishing with PDM}}
-    \program{W\smc{SU} Python Working Group}{Pullman, WA}
-    \date{8~February~2023}
-
-    \url{https://edsq.github.io/eds-notes/python_notes/pwg_presentation/intro.html}}
-
-
-  \subrubric{2022}
-  \entry[Poster]{%
-    \href{https://meetings.aps.org/Meeting/DAMOP22/Session/N01.65}
-    {\title{Classical Hydrodynamics and Coarse-Grained Quantum Turbulence}}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Orlando, FL}
-    \date{1~June~2022}}
-
-
-  \subrubric{2021}
-  \entry[Poster]{%
-    \title{Vortex Filament Dynamics in the Unitary Fermi Gas}
-    \program{A\smc{PS} \smc{DAMOP} Meeting}{Virtual}
-    \date{2~June~2021}}
+    \subrubric{2021}
+        \poster{Vortex Filament Dynamics in the Unitary Fermi Gas}
+            {A\smc{PS} \smc{DAMOP} Meeting}
+            {Virtual}
+            {2~June~2021}
+            {}
 
 \end{rubric}
+
 \endgroup
 %%% Local Variables:
 %%% mode: latex
