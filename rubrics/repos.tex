@@ -1,3 +1,12 @@
+\begingroup  % Local scope for these commands
+
+\newcommand{\repo}[3]{\entry{#1: #2\newline\url{#3}}}
+% Syntax is:
+% \repo{Name}
+%     {Description}
+%     {Link}
+
+
 \begin{rubric}{Code Repositories}
     \subrubric{Forge Accounts}
     \entry{GitHub: \href{https://github.com/edsq}{edsq}}
@@ -6,53 +15,46 @@
 
     \subrubric{Selected Repositories}
 
-    \entry{pytimeode: Time evolution for large-scale systems of ODEs using python.
+    \repo{pytimeode}
+        {Time evolution for large-scale systems of ODEs using python.}
+        {https://gitlab.com/coldatoms/pytimeode}
 
-        \url{https://gitlab.com/coldatoms/pytimeode}}
+    \repo{curriculum-vitae}
+        {This CV.}
+        {https://github.com/edsq/curriculum-vitae}
 
+    \repo{rust-schrodinger}
+        {Solving the Schr\"{o}dinger equation in Rust; a work in progress.}
+        {https://github.com/edsq/rust-schrodinger}
 
-    \entry{curriculum-vitae: This CV.
+    \repo{phys-classroom-grading}
+        {A tool for importing Physics Classroom grades into Canvas.}
+        {https://github.com/edsq/phys-classroom-grading}
 
-      \url{https://github.com/edsq/curriculum-vitae}}
+    \repo{nox-pdm}
+        {A tool to improve integration between the Python project manager PDM
+        and testing utility Nox.}
+        {https://gitlab.com/eeskew/nox-pdm}
 
+    \repo{Personal notes}
+        {A Jupyter Book I made for personal notes on physics and coding.}
+        {https://github.com/edsq/eds-notes}
 
-    \entry{rust-schrodinger: A work in progress, solving the Schr\"{o}dinger
-    equation in Rust.
+    \repo{Northwest Quantum Nexus 2023 Hackathon}
+        {The \smc{WSU} team's submission to the NQN 2023 hackathon.}
+        {https://github.com/edsq/nqn-hackathon-2023}
 
-      \url{https://github.com/edsq/rust-schrodinger}}
+    \repo{Weak Measurement}
+        {A Jupyter Book detailing weak quantum measurement and an
+        implementation in Qiskit.}
+        {https://gitlab.com/eeskew/physics-555-weak-measurement}
 
-
-    \entry{phys-classroom-grading: A tool for importing Physics Classroom
-      grades into Canvas.
-
-      \url{https://github.com/edsq/phys-classroom-grading}}
-
-
-    \entry{nox-pdm: A tool to improve integration between the Python project
-      manager PDM and testing utility Nox.
-
-      \url{https://gitlab.com/eeskew/nox-pdm}}
-
-
-    \entry{Personal notes
-
-      \url{https://github.com/edsq/eds-notes}}
-
-
-    \entry{Northwest Quantum Nexus 2023 Hackathon
-
-      \url{https://github.com/edsq/nqn-hackathon-2023}}
-
-
-    \entry{Jupyter Book: Weak Measurement
-
-      \url{https://gitlab.com/eeskew/physics-555-weak-measurement}}
-    
-
-    \entry{wordle-cheater: A command-line utility for cheating on Wordle.
-
-      \url{https://github.com/edsq/wordle-cheater}}
+    \repo{wordle-cheater}
+        {A command-line utility for cheating on Wordle.}
+        {https://github.com/edsq/wordle-cheater}
 \end{rubric}
+
+\endgroup
 
 %%% Local Variables: 
 %%% mode: latex
