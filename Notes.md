@@ -11,6 +11,11 @@
     feaures corresponding to each font series.  See III.4 in the fontspec docs:
     https://ctan.math.illinois.edu/macros/unicodetex/latex/fontspec/fontspec.pdf
 
+- I'm currently relying on the font `Libre Caslon Text` being installed for font option
+  #1 to work.
+  - TODO: Install this font in the github action, and add it to the readme
+  - Not super important since I'm not terribly wild about it as a font, though
+
 
 ## 2026-01-30
 
