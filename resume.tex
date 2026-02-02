@@ -2,30 +2,9 @@
 % https://cocalc.com/projects/13fd6946-fdd9-474e-a824-5ba2b0d7efda/files/Skeletons/Resume/mforbes/
 \documentclass{curve}
 
-% % Packages I'm not using now, but may want later
-% \usepackage{bibentry}
-% \usepackage{natbib}
-% \usepackage{amsmath}
-% \usepackage{siunitx}
-% \usepackage{ragged2e}
-% \usepackage{suffix}
-% \usepackage{graphicx}
-
-% % siunitx commands
-% \newcommand{\CAD}[1]{\SI{#1}[\$]{\CAD}}
-% \newcommand{\USD}[1]{\SI{#1}[\$]{\USD}}
-% \DeclareSIUnit\CAD{\smc{CAD}}
-% \DeclareSIUnit\USD{\smc{USD}}
-% % This may need to go after font etc choices?
-% % But it is deprecated regardless:
-% % https://tex.stackexchange.com/questions/612238/siunitx-v3-replacement-for-detect-all
-% \sisetup{detect-all}
-
-% % graphicx commands
-% \graphicspath{{figures/}}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[letterpaper,nohead,nofoot,hmargin=1.2cm,vmargin=1.1cm,
             %showframe, 
             ]{geometry}
@@ -33,15 +12,20 @@
 \usepackage{etoolbox}  % Used for `\ifblank`
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\smc}[1]{\textsc{\MakeLowercase{#1}}}
 \newcommand{\headerfont}{\fontfamily{pag}\selectfont}
 \newcommand{\select}[6]{#2}    % Use to select font options.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts and style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frenchspacing
+\prefix{\textbullet}  % Default
 
-\title{Edward T. Eskew}
 \select{% Use \newcommand{\select}[5]{#1}
   \usepackage[LY1]{fontenc}
   \usepackage{fontspec}
@@ -147,7 +131,10 @@
   \newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
 }
 
-% WSU Address
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \leftheader{
   \headerfont
   Washington State University\\
@@ -161,39 +148,71 @@
   \textbf{Cell Phone:} (508) 494-5570\\
   \textbf{Email:} \texttt{edward.eskew@wsu.edu}}
 
-%\photo[r]{data/head_2012.jpg}
-
-\newcounter{paper}%
-\makeatletter
-\patchcmd{\entry}{\@ifstar}{\addtocounter{paper}{1}\@ifstar}{}{}
-\makeatother
+\title{Edward T. Eskew}
 
 \begin{document}
-%\nobibliography{master}%\makeheaders
-\makeheaders
-\maketitle
+    % This sets the width of the rubrics.  Needs to be here and not in the
+    % preamble because `\linewidth` isn't defined until the document body.
+    \setlength{\linewidth}{0.8\textwidth}
 
-%\prefix{\llap{[\arabic{paper}]}}
-%\makerubric{publications}
-\prefix{\textbullet}
+    \makeheaders
+    \maketitle
 
-\setlength{\linewidth}{0.8\textwidth}
-\makerubric{rubrics/education}
-\makerubric{rubrics/experience}
-%\makerubric{publications}
-%\makerubric{other_publications}
-\makerubric{rubrics/talks}
-\makerubric{rubrics/worksinprogress}
-\makerubric{rubrics/workshops}
-\makerubric{rubrics/awards}
-\makerubric{rubrics/repos}
-\makerubric{rubrics/skills}
-\makerubric{rubrics/teaching}
-%\makerubric{service}
-%\makerubric{funding}
-
-\bibliographystyle{res}
+    \makerubric{rubrics/education}
+    \makerubric{rubrics/experience}
+    %\makerubric{publications}
+    %\makerubric{other_publications}
+    \makerubric{rubrics/talks}
+    \makerubric{rubrics/worksinprogress}
+    \makerubric{rubrics/workshops}
+    \makerubric{rubrics/awards}
+    \makerubric{rubrics/repos}
+    \makerubric{rubrics/skills}
+    \makerubric{rubrics/teaching}
+    %\makerubric{service}
+    %\makerubric{funding}
 \end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful snippets
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Packages I'm not using now, but may want later
+% \usepackage{bibentry}
+% \usepackage{natbib}
+% \usepackage{amsmath}
+% \usepackage{siunitx}
+% \usepackage{ragged2e}
+% \usepackage{suffix}
+% \usepackage{graphicx}
+
+% % siunitx commands
+% \newcommand{\CAD}[1]{\SI{#1}[\$]{\CAD}}
+% \newcommand{\USD}[1]{\SI{#1}[\$]{\USD}}
+% \DeclareSIUnit\CAD{\smc{CAD}}
+% \DeclareSIUnit\USD{\smc{USD}}
+% % This may need to go after font etc choices?
+% % But it is deprecated regardless:
+% % https://tex.stackexchange.com/questions/612238/siunitx-v3-replacement-for-detect-all
+% \sisetup{detect-all}
+
+% % graphicx commands
+% \graphicspath{{figures/}}
+
+% % etoolbox commands
+% % This command creates counter `papercount` and increments it for each `\entry`.
+% % Display with `\thepapercount`.
+% % Would probably want to `\setcounter{papercount}{0}` before each rubric.
+% \newcounter{papercount}
+% \makeatletter
+% \patchcmd{\entry}{\@ifstar}{\addtocounter{papercount}{1}\@ifstar}{}{}
+% \makeatother
+
+% % After implementing the above counter, I could number each entry by changing
+% % the `\prefix`, like so:
+% \prefix{\llap{[\arabic{papercount}]}}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
