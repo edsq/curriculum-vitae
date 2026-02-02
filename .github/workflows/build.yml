@@ -11,7 +11,6 @@ jobs:
         with:
           root_file: resume.tex
           latexmk_use_xelatex: true
-          extra_fonts: ./fonts/Inter-4/Inter.ttc
       - name: Rename built PDF
         run: sudo mv _build/resume.pdf eskew_CV.pdf
       - name: Upload PDF file
