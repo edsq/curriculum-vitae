@@ -1,5 +1,15 @@
 # Working notes
 
+## 2026-03-24
+
+- Fixed Libre Caslon Text not being available.  It's distributed under the OFL so I
+  could also just vendor it.
+- I'm going to try out my font option #2 at the annual review tomorrow (Inter title,
+  Source Serif 4 body), but:
+  - TODO: experiment with reducing the boldness of the Inter title in the same way I do
+    in font option #4.
+
+
 ## 2026-02-01
 
 - I was having trouble getting bold versions of my installed fonts Jost, Inter, and

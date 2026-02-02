@@ -17,7 +17,10 @@
 % Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\smc}[1]{\textsc{\MakeLowercase{#1}}}
-\newcommand{\select}[5]{#4}    % Use to select font options.
+\newcommand{\select}[5]{#1}    % Use to select font options.
+% For example, to select option 5, make the command read
+% `\newcommand{\select}[5]{#5}`.
+% The options are listed in the actual invocation of `\select` below.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,8 +58,15 @@
 }
 
 \select{% Use \newcommand{\select}[4]{#1}
-    % Libre Caslon body, Jost titles
-    \setmainfont{Libre Caslon Text}
+    % Font option 1:
+    % Libre Caslon Text body, Jost titles
+    \setmainfont[
+        Path = ./fonts/Libre_Caslon_Text/,
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        BoldFont = *-Bold,
+        ItalicFont = *-Italic,
+    ]{LibreCaslonText}
     \linespread{1.04}
     \renewcommand{\smc}[1]{#1}  % Small caps isn't working, not sure why
 
@@ -69,6 +79,7 @@
         BoldItalicFont = *-BoldItalic,
     ]{Jost}
 }{% Use \newcommand{\select}[4]{#2}
+    % Font option 2:
     % Source Serif 4 body, Inter titles
     \setmainfont[
         Path = ./fonts/Source_Serif_4/static/,
@@ -87,10 +98,12 @@
         BoldItalicFeatures = {FontIndex=3},
     ]{Inter.ttc}
 }{% Use \newcommand{\select}[4]{#3}
+    % Font option 3:
     % Palatino clone body, Helvetica clone titles
     \usepackage{newpx}
     \linespread{1.025}              % Palatino leads a little more leading
 }{% Use \newcommand{\select}[4]{#4}
+    % Font option 4:
     % Palatino clone body, Inter titles (but with bold toned down)
     \usepackage{newpx}
     \linespread{1.025}              % Palatino leads a little more leading
@@ -104,6 +117,8 @@
         BoldItalicFeatures = {FontIndex=3},
     ]{Inter.ttc}
 }{% Use \newcommand{\select}[4]{#5}
+    % Font option 5:
+    % Bookman body, Bookman titles
     \titlefont{\fontfamily{pbk}\selectfont\bfseries\Huge}
     \subtitlefont{\fontfamily{pbk}\selectfont\itshape\huge}
     \rubricfont{\fontfamily{pbk}\selectfont\bfseries\Large}
