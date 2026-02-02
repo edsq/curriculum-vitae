@@ -51,16 +51,16 @@ only one `*.tex` file in the root.
 ## Font and style options
 
 The `resume.tex` skeleton file includes a simple `\select` command for easily switching
-between different fonts/styles.  It takes 6 arguments (at the moment) and is hardcoded
+between different fonts/styles.  It takes 4 arguments (at the moment) and is hardcoded
 in its definition to just pick one of them to add to the TeX source:
 
 ```tex
-\newcommand{\select}[6]{#1}
+\newcommand{\select}[4]{#1}
 ```
 
 Thus, to change to one of the other options given in the actual invocation of the
 `\select` command, you would change the definition in the preamble.  For example, to use
-the second option: `\newcommand{\select}[6]{#2}`.
+the second option: `\newcommand{\select}[4]{#2}`.
 
 
 ## GitHub releases
