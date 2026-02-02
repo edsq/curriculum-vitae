@@ -17,7 +17,7 @@
 % Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\smc}[1]{\textsc{\MakeLowercase{#1}}}
-\newcommand{\select}[4]{#3}    % Use to select font options.
+\newcommand{\select}[5]{#4}    % Use to select font options.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,7 +89,20 @@
     % Palatino clone body, Helvetica clone titles
     \usepackage{newpx}
     \linespread{1.025}              % Palatino leads a little more leading
-}{% Use \newcommand{\select}[4]{#3}
+}{% Use \newcommand{\select}[4]{#4}
+    % Palatino clone body, Inter titles (but with bold toned down)
+    \usepackage{newpx}
+    \linespread{1.025}              % Palatino leads a little more leading
+
+    \setsansfont[
+        Path = ./fonts/Inter-4/,
+        UprightFeatures = {FontIndex=0},
+        %BoldFeatures = {FontIndex=12},
+        BoldFeatures = {FontIndex=32},
+        ItalicFeatures = {FontIndex=2},
+        BoldItalicFeatures = {FontIndex=3},
+    ]{Inter.ttc}
+}{% Use \newcommand{\select}[4]{#5}
     \titlefont{\fontfamily{pbk}\selectfont\bfseries\Huge}
     \subtitlefont{\fontfamily{pbk}\selectfont\itshape\huge}
     \rubricfont{\fontfamily{pbk}\selectfont\bfseries\Large}
