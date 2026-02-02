@@ -1,5 +1,17 @@
 # Working notes
 
+## 2026-02-01
+
+- I was having trouble getting bold versions of my installed fonts Jost, Inter, and
+  Source Serif 4 to work (`\textbf` would do nothing).
+  - I'm guessing this was because XeTeX couldn't find the bold variants?  But could not
+    figure it out.
+  - I eventually got things to work by explicitly passing the path to each font
+  - For Inter, which came as a `.ttc` (TrueType collection), I had to specify the
+    feaures corresponding to each font series.  See III.4 in the fontspec docs:
+    https://ctan.math.illinois.edu/macros/unicodetex/latex/fontspec/fontspec.pdf
+
+
 ## 2026-01-30
 
 - I wanted to use open source fonts to avoid problems building on other computers; this
