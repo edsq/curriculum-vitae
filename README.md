@@ -75,15 +75,14 @@ multiple releases over one day.
 
 The original skeleton for this CV is thanks to Michael McNeil Forbes.
 
-I am using the open source fonts [Inter](https://rsms.me/inter), Bistream Vera, and
-[Jost*](https://indestructibletype.com/Jost.html).
+I am using the open source fonts [Inter](https://rsms.me/inter), Bistream Vera,
+[Jost](https://indestructibletype.com/Jost.html), and [Source Serif
+4](https://fonts.google.com/specimen/Source+Serif+4).
 
 Inter is Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter).
 
 Bitstream Vera is Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream
 Vera is a trademark of Bitstream, Inc.
 
-Jost* is Copyright 2020 The Jost Project Authors
+Jost is Copyright 2020 The Jost Project Authors
 (https://github.com/indestructible-type/Jost).
-
-
