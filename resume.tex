@@ -1,29 +1,44 @@
 % Skeleton from Michael McNiel Forbes
 % https://cocalc.com/projects/13fd6946-fdd9-474e-a824-5ba2b0d7efda/files/Skeletons/Resume/mforbes/
 \documentclass{curve}
-\providecommand{\thebibliography}{}
-\usepackage{bibentry}
-\usepackage{natbib}
+
+% % Packages I'm not using now, but may want later
+% \usepackage{bibentry}
+% \usepackage{natbib}
+% \usepackage{amsmath}
+% \usepackage{siunitx}
+% \usepackage{ragged2e}
+% \usepackage{suffix}
+% \usepackage{graphicx}
+
+% % siunitx commands
+% \newcommand{\CAD}[1]{\SI{#1}[\$]{\CAD}}
+% \newcommand{\USD}[1]{\SI{#1}[\$]{\USD}}
+% \DeclareSIUnit\CAD{\smc{CAD}}
+% \DeclareSIUnit\USD{\smc{USD}}
+% % This may need to go after font etc choices?
+% % But it is deprecated regardless:
+% % https://tex.stackexchange.com/questions/612238/siunitx-v3-replacement-for-detect-all
+% \sisetup{detect-all}
+
+% % graphicx commands
+% \graphicspath{{figures/}}
+
+
+% Packages
 \usepackage[letterpaper,nohead,nofoot,hmargin=1.2cm,vmargin=1.1cm,
             %showframe, 
             ]{geometry}
-\usepackage{amsmath}
-\usepackage{siunitx}
-\usepackage{ragged2e}
-\usepackage{etoolbox}
 \usepackage{hyperref}
-\usepackage{suffix}
-\usepackage{graphicx}
-\usepackage{etoolbox}  % Used for `\ifblank` in workshops
-\graphicspath{{figures/}}
-\DeclareSIUnit\CAD{\smc{CAD}}
-\DeclareSIUnit\USD{\smc{USD}}
-\newcommand{\CAD}[1]{\SI{#1}[\$]{\CAD}}
-\newcommand{\USD}[1]{\SI{#1}[\$]{\USD}}
-\newcommand{\select}[6]{#2}    % Use to select font options.
+\usepackage{etoolbox}  % Used for `\ifblank`
+
+
+% Commands
 \newcommand{\smc}[1]{\textsc{\MakeLowercase{#1}}}
 \newcommand{\headerfont}{\fontfamily{pag}\selectfont}
-\newcommand{\exclude}[1]{}
+\newcommand{\select}[6]{#2}    % Use to select font options.
+
+
 \frenchspacing
 
 \title{Edward T. Eskew}
@@ -131,7 +146,6 @@
   \keyfont{\hfill\ttfamily}
   \newcommand{\amper}{{\fontspec[Scale=.95]{Fontin}\selectfont\itshape\&}}
 }
-\sisetup{detect-all}
 
 % WSU Address
 \leftheader{
