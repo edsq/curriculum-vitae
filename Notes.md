@@ -9,6 +9,18 @@
   - TODO: experiment with reducing the boldness of the Inter title in the same way I do
     in font option #4.
 
+- I'm going to not add the MICRO part of my CalVer scheme unless I'm releasing a second
+  time in one day (or know for sure that I will); it's a bit hard to indentify the
+  version number as a date with it there.
+
+- It would be good to be able to pick which font option I'm using with an environment
+  variable or an argument passed to `latexmk` or `xetex`.  That would avoid having to
+  edit the source when comparing font options, and would potentially enable building on
+  GitHub CI with each option, improving my 'test coverage'.
+  - Looks like one potential working option is
+    [here](https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home/62032#62032).
+    A bit complicated, though; might not be worth it.
+
 
 ## 2026-02-01
 
